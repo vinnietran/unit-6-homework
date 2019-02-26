@@ -1,3 +1,30 @@
 .animal-btn {
     margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 150px;
+    height: 30px;
+    background-color: aqua;
+    color: white;
+    
+}
+
+.gif {
+    height: 200px;
+    width: 250px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#rating{
+    color: red;
+    position: relative;
+    top: 70px;
+
+}
+
+#gifsDiv{
+    margin-left: 15px;
 }

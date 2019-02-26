@@ -21,14 +21,37 @@ function displayAnimal() {
 
       var gif = response.data[i].images.fixed_height.url;
 
+      var ratingDiv = $("<div id='rating'>");
+
+      var rating = (response.data[i].rating);
+
+      var gifsDiv = $("<div id='gifs'>");
+
+      var p = $("<p>").text("Rating: " + rating);
+
       var img = $('<img />');
       img.addClass("gif");
       img.attr("src", still);
       img.attr("data-still", still);
       img.attr("data-animate", gif);
-      img.attr("data-state", "still")
+      img.attr("data-state", "still");
 
-      img.appendTo($('#gif-row-1'));
+      $(gifsDiv).append(img);
+
+      // gifsDiv.prepend(p);
+
+
+      $("#gif-row-1").append(gifsDiv);
+
+
+      //img.appendTo($('#gif-row-1'));
+
+      /*$(gifsDiv).append(img);
+      $(ratingDiv).append(rating);
+      $(gifsDiv).append(ratingDiv);
+      $("#gif-row-1").append(gifsDiv);*/
+
+
     }
 
 
@@ -48,6 +71,7 @@ function displayAnimal() {
     });
 
     console.log(response);
+    console.log(rating);
   })
   $("#gif-row-1").empty();
 }
@@ -75,10 +99,10 @@ function renderButtons() {
     a.text(topics[i]);
     // Adding the button to the buttons-view div
     $("#buttons").append(a);
-   
-   
+
+
   }
- 
+
 }
 $("#add-animal").on("click", function (event) {
   event.preventDefault();
