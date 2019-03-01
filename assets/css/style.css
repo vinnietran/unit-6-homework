@@ -4,9 +4,9 @@
     margin-top: 10px;
     margin-left: 15px;
     width: 150px;
-    height: 30px;
-    background-color: aqua;
-    color: white;
+    height: 40px;
+   
+   
     
 }
 
@@ -16,15 +16,17 @@
     margin-right: 15px;
     margin-top: 10px;
     margin-left: 15px;
+    margin-bottom: 15px;
+    position: relative;
+
 }
 
-#rating{
-    color: red;
-    position: relative;
-    top: 70px;
-
+.rating{
+    float: left;
+ 
 }
 
 #gifsDiv{
     margin-left: 15px;
 }
+
